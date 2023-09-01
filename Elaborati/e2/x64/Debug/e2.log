@@ -1,0 +1,58 @@
+﻿  main.c
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(23,2): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(25,7): error C2065: 'mov': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(25,7): error C2146: syntax error: missing ';' before identifier 'ecx'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(25,10): error C2065: 'ecx': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(26,3): error C2146: syntax error: missing ';' before identifier 'mov'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(26,7): error C2065: 'mov': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(26,7): error C2146: syntax error: missing ';' before identifier 'eax'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(26,10): error C2065: 'eax': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(27,3): error C2146: syntax error: missing ';' before identifier 'mov'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(27,7): error C2065: 'mov': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(27,7): error C2146: syntax error: missing ';' before identifier 'ebx'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(27,10): error C2065: 'ebx': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(28,3): error C2146: syntax error: missing ';' before identifier 'mov'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(28,7): error C2065: 'mov': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(28,7): error C2146: syntax error: missing ';' before identifier 'edx'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(28,10): error C2065: 'edx': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(29,3): error C2146: syntax error: missing ';' before identifier 'mov'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(29,7): error C2065: 'mov': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(29,7): error C2146: syntax error: missing ';' before identifier 'esi'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(29,10): error C2065: 'esi': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(31,3): error C2146: syntax error: missing ';' before identifier 'loop_start'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(32,7): error C2065: 'mov': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(32,7): error C2146: syntax error: missing ';' before identifier 'successione'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(32,22): error C2065: 'esi': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(33,4): error C2065: 'eax': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(33,4): error C2146: syntax error: missing ';' before identifier 'add'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(33,8): error C2065: 'add': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(33,8): error C2146: syntax error: missing ';' before identifier 'esi'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(33,11): error C2065: 'esi': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(35,4): error C2146: syntax error: missing ';' before identifier 'mov'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(35,8): error C2065: 'mov': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(35,8): error C2146: syntax error: missing ';' before identifier 'edx'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(35,11): error C2065: 'edx': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(36,4): error C2065: 'eax': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(36,4): error C2146: syntax error: missing ';' before identifier 'add'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(36,8): error C2065: 'add': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(36,8): error C2146: syntax error: missing ';' before identifier 'eax'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(36,11): error C2065: 'eax': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(37,4): error C2065: 'ebx': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(37,4): error C2146: syntax error: missing ';' before identifier 'mov'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(37,8): error C2065: 'mov': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(37,8): error C2146: syntax error: missing ';' before identifier 'ebx'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(37,11): error C2065: 'ebx': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(39,4): error C2065: 'edx': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(39,4): error C2146: syntax error: missing ';' before identifier 'inc'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(39,8): error C2065: 'inc': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(39,8): error C2146: syntax error: missing ';' before identifier 'ecx'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(40,4): error C2065: 'ecx': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(40,4): error C2146: syntax error: missing ';' before identifier 'cmp'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(40,8): error C2065: 'cmp': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(40,8): error C2146: syntax error: missing ';' before identifier 'ecx'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(40,11): error C2065: 'ecx': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(41,4): error C2146: syntax error: missing ';' before identifier 'jne'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(41,8): error C2065: 'jne': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(41,8): error C2146: syntax error: missing ';' before identifier 'loop_start'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(42,2): error C2065: 'loop_start': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Elaborati\e2\main.c(42,2): error C2143: syntax error: missing ';' before '}'
