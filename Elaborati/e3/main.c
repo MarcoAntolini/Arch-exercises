@@ -25,26 +25,27 @@ void main()
 	// Blocco assembler
 	__asm
 		{
-			mov esi, 0 // Inizializza l'indice sorgente (esi) a 0
-			mov edi, len // Inizializza l'indice destinazione (edi) a len
-			mov ecx, len // Inizializza il contatore (ecx) a len (numero di byte)
+			mov esi, 0 // inizializza l'indice di vet[] a 0
+			mov edi, len // inizializza l'indice di res[] a len (sarà decrementato)
+			mov ecx, len // inizializza il contatore a len (numero di byte)
 
-		loop_start:
-			mov al, vet[esi] // Carica il byte da vet[esi] nel registro al
-			xor dl, dl // Azzera il registro dl (sarà usato per costruire il risultato)
-			xor ebx, ebx // Azzera il registro ebx (usato come contatore per i bit)
-			mov ebx, 8 // Imposta ebx a 8 (numero di bit in un byte)
+		main_loop:
+			mov al, vet[esi] // carica il byte da vet[esi] nel registro al
+			xor dl, dl // azzera il registro dl (sarà usato per costruire il risultato)
+			xor ebx, ebx // azzera il registro ebx (usato come contatore per i bit)
+			mov ebx, 8 // imposta ebx a 8 (numero di bit in un byte)
 			
-		bit_loop_start:
-			rcr al, 1 // Ruota il bit meno significativo di al nel carry (rcr = rotate through carry right)
-			rcl dl, 1 // Ruota il carry nel bit più significativo di dl (rcl = rotate through carry left)
-			dec ebx // Decrementa il contatore dei bit
-			jnz bit_loop_start // Salta a bit_loop_start se ebx non è zero (ancora bit da processare)
+		bit_loop:
+			rcr al, 1 // ruota il bit meno significativo di al nel carry
+			rcl dl, 1 // ruota il carry nel bit più significativo di dl
+			dec ebx // decrementa il contatore dei bit e continua il ciclo finché non è zero
+			jnz bit_loop
 
-			dec edi // Decrementa l'indice di destinazione (edi)
-			mov res[edi], dl // Memorizza il byte invertito nel vettore di risultato
-			inc esi // Incrementa l'indice sorgente (esi)
-			loop loop_start // Ripeti il ciclo fino a quando ecx non è zero
+			// decrementa l'indice di res[] e memorizza il byte invertito
+			dec edi
+			mov res[edi], dl
+			inc esi // incrementa l'indice di vet[]
+			loop main_loop // ripete il ciclo per ogni byte
 		}
 
 	// Stampa su video

@@ -7,7 +7,7 @@
  Elaborato 1
  Descrizione:	Data una stringa C (terminata dal carattere nullo), contenente una
 			frase (ossia parole separate da spazi e/o segni di punteggiatura),
-			trovare la parola pi� lunga e la parola pi� corta. In caso di parole
+			trovare la parola pi� lunga e la parola pi� corta. In caso di parole
 			di uguale lunghezza, considerare la prima da sinistra.
 			Le due parole vanno copiate in due array di caratteri come stringhe
 			C (terminate dal carattere nullo).
@@ -28,107 +28,107 @@ void main()
 
 	// Inline assembly block
 	__asm
-	{
-		xor edi, edi // edi = i
-		xor ecx, ecx // ecx = j
-		xor al, al // eax = max
-		mov ebx, MAX_LEN // ebx = min
-		xor edx, edx // edx = len
-		xor esi, esi // esi = inWord (0 for false)
+		{
+			xor al, al // azzera il registro al, che conterrà il carattere corrente
+			xor edi, edi // azzera il registro edi, che conterrà l'indice della frase
+			xor ecx, ecx // azzera il registro ecx, che conterrà la lunghezza della parola più lunga (e in situazioni temporanee anche l'indice della parola)
+			mov ebx, MAX_LEN // imposto il registro ebx a MAX_LEN, che conterrà la lunghezza della parola più corta
+			xor edx, edx // azzera il registro edx, che conterrà la lunghezza della parola corrente
+			xor esi, esi // azzera il registro esi, che conterrà un booleano che indica se ci si trova all'interno di una parola
 
-	loop_start:
-		mov al, byte ptr[frase + edi] // Load the next character into AL
+		loop_start:
+			mov al, byte ptr[frase + edi] // carica il carattere corrente
 
-		// Check for end of string
-		cmp al, 0
-		je done
+			// se il carattere corrente è 0, allora la frase è finita
+			cmp al, 0
+			je done
 
-		cmp al, ' '
-		je end_of_word
-		cmp al, ','
-		je end_of_word
-		cmp al, '.'
-		je end_of_word
-		cmp al, ';'
-		je end_of_word
-		cmp al, ':'
-		je end_of_word
-		cmp al, '\''
-		je end_of_word
-		cmp al, '?'
-		je end_of_word
-		cmp al, '!'
-		je end_of_word
+			// se il carattere corrente è uno dei seguenti segni di punteggiatura, allora siamo alla fine di una parola
+			cmp al, ' '
+			je end_of_word
+			cmp al, ','
+			je end_of_word
+			cmp al, '.'
+			je end_of_word
+			cmp al, ';'
+			je end_of_word
+			cmp al, ':'
+			je end_of_word
+			cmp al, '\''
+			je end_of_word
+			cmp al, '?'
+			je end_of_word
+			cmp al, '!'
+			je end_of_word
 
-		// It's not a space or punctuation, so it's part of a word
-		inc edx // Increment len
-		test esi, esi // Test inWord
-		jnz increment // Already in a word, continue
-		jmp change_in_word // We were not in a word, so mark inWord and reset len
+			inc edx // incrementa la lunghezza della parola corrente
+			test esi, esi // se siamo all'interno di una parola, allora salta a increment, altrimenti salta a change_boolean_word
+			jnz increment
+			jmp change_boolean_word
 
-	end_of_word:
-		// Not part of a word
-		test esi, esi // Test inWord
-		jz increment	// Already not in a word, continue
-		// We were in a word, so process it
-	albero:
-		cmp edx, ecx // Compare len with max
-		jle not_max	// If len is less than or equal to max, skip
-		// Update max and copy the word to parolaMax
-		push edx
-		mov ecx, 0 // Reset j
-		
-	copy_word_max:
-		push edi
-		sub edi, edx
-		add edi, ecx
+		end_of_word:
+			test esi, esi // se non siamo all'interno di una parola, allora salta a increment, altrimenti continua
+			jz increment
 
-		mov al, byte ptr[frase + edi]
-		pop edi
-		mov byte ptr[parolaMax + ecx], al
-		inc ecx
-		cmp ecx, edx
-		jl copy_word_max
-		mov byte ptr[parolaMax + ecx], 0 // Null - terminate parolaMax
-		pop ecx
+		last_word:
+			cmp edx, ecx // se la lunghezza della parola corrente è minote della lunghezza della parola più lunga, allora salta a continue_checks 
+			jle continue_checks
 
-	not_max:
-		cmp edx, ebx // Compare len with min
-		jge reset // If len is greater than or equal to min, continue
-		// Update min and copy the word to parolaMin
-		push ecx
-		mov ecx, 0 // Reset j
-		mov ebx, edx // Update min with len
+			push edx // sposta sullo stack la lunghezza della parola corrente, per poi ripristinarla
+			mov ecx, 0 // azzera l'indice della parola corrente
+			
+		copy_word_max: // copia la parola corrente in parolaMax
+			push edi // sposta sullo stack l'indice della frase, per poi ripristinarlo
+			// calcola l'indice della parola corrente e carica il carattere corrente
+			sub edi, edx
+			add edi, ecx
+			mov al, byte ptr[frase + edi]
+			pop edi // ripristina l'indice della frase
+			mov byte ptr[parolaMax + ecx], al // copia il carattere corrente in parolaMax
+			inc ecx // incrementa l'indice della parola corrente
+			cmp ecx, edx // se l'indice della parola corrente è minore della lunghezza della parola corrente, allora continua a copiare
+			jl copy_word_max
+			mov byte ptr[parolaMax + ecx], 0 // aggiunge il carattere nullo alla fine della parola corrente
+			pop ecx // ripristina l'indice della parola corrente
 
-	copy_word_min :
-		push edi
-		sub edi, edx
-		add edi, ecx
-		mov al, byte ptr[frase + edi]
-		pop edi
-		mov byte ptr[parolaMin + ecx], al
-		inc ecx
-		cmp ecx, edx
-		jl copy_word_min
-		mov byte ptr[parolaMin + ecx], 0 // Null - terminate parolaMin
-		pop ecx
+		continue_checks:
+			cmp edx, ebx // se la lunghezza della parola corrente è maggiore della lunghezza della parola più corta, allora salta a reset
+			jge reset
 
-	reset:
-		mov esi, 0 // Set inWord to false
-		mov edx, 0 // Reset len
-		jmp increment // Continue
+			push ecx // sposta sullo stack l'indice della parola corrente, per poi ripristinarlo
+			mov ecx, 0 // azzera l'indice della parola corrente
+			mov ebx, edx // copia la lunghezza della parola corrente in ebx
 
-	change_in_word:
-		mov esi, 1
+		copy_word_min: // copia la parola corrente in parolaMin
+			push edi // sposta sullo stack l'indice della frase, per poi ripristinarlo
+			// calcola l'indice della parola corrente e carica il carattere corrente
+			sub edi, edx
+			add edi, ecx
+			mov al, byte ptr[frase + edi]
+			pop edi // ripristina l'indice della frase
+			mov byte ptr[parolaMin + ecx], al // copia il carattere corrente in parolaMin
+			inc ecx // incrementa l'indice della parola corrente
+			cmp ecx, edx // se l'indice della parola corrente è minore della lunghezza della parola corrente, allora continua a copiare
+			jl copy_word_min
+			mov byte ptr[parolaMin + ecx], 0 // aggiunge il carattere nullo alla fine della parola corrente
+			pop ecx // ripristina l'indice della parola corrente
 
-	increment:
-		inc edi // Increment i
-		jmp loop_start // Repeat the loop
+		reset: // resetta le variabili per la prossima parola e salta a increment
+			mov esi, 0
+			mov edx, 0
+			jmp increment
 
-	done:
-		test esi, esi // Test inWord
-		jnz albero
-	}
+		change_boolean_word: // cambia a true il valore del booleano che indica se ci si trova all'interno di una parola
+			mov esi, 1
+
+		increment: // incrementa l'indice della frase e salta a loop_start
+			inc edi
+			jmp loop_start
+
+		done: // la frase è finita
+			test esi, esi // ma se siamo ancora all'interno di una parola, allora salta a last_word
+			jnz last_word
+		}
 
 	// Print the results
 	printf("%s\n%s\n%s\n", frase, parolaMax, parolaMin);
