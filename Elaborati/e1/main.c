@@ -131,6 +131,18 @@ void main()
 		end_of_phrase: // la frase è finita
 			test esi, esi // ma se siamo ancora all'interno di una parola, allora salta a last_word
 			jnz last_word
+
+		fill_word_min: // aggiunge il carattere nullo alla fine della parola più corta
+			mov byte ptr[parolaMin + ebx], 0 
+			inc ebx
+			cmp ebx, MAX_LEN
+			jle fill_word_min
+
+		fill_word_max: // aggiunge il carattere nullo alla fine della parola più lunga
+			mov byte ptr[parolaMax + ecx], 0
+			inc ecx
+			cmp ecx, MAX_LEN
+			jle fill_word_max
 		}
 
 	// Print the results
