@@ -22,7 +22,8 @@
 void main()
 {
 	// Variables
-	char frase[MAX_LEN] = "Cantami, o Diva, del Pelide Achille l'ira funesta che infiniti addusse lutti agli Achei";
+	char frase[MAX_LEN] = "Cantami, o Diva, del Pelide Achille l'ira funesta che \
+											infiniti addusse lutti agli Achei";
 	char parolaMax[MAX_LEN + 1];
 	char parolaMin[MAX_LEN + 1];
 
@@ -41,7 +42,7 @@ void main()
 
 			// se il carattere corrente è 0, allora la frase è finita
 			cmp al, 0
-			je done
+			je end_of_phrase
 
 			// se il carattere corrente è uno dei seguenti segni di punteggiatura, allora siamo alla fine di una parola
 			cmp al, ' '
@@ -60,6 +61,8 @@ void main()
 			je end_of_word
 			cmp al, '!'
 			je end_of_word
+			cmp al, 9
+			je end_of_word
 
 			inc edx // incrementa la lunghezza della parola corrente
 			test esi, esi // se siamo all'interno di una parola, allora salta a increment, altrimenti salta a change_boolean_word
@@ -71,7 +74,7 @@ void main()
 			jz increment
 
 		last_word:
-			cmp edx, ecx // se la lunghezza della parola corrente è minote della lunghezza della parola più lunga, allora salta a continue_checks 
+			cmp edx, ecx // se la lunghezza della parola corrente è minore o uguale della lunghezza della parola più lunga, allora salta a continue_checks 
 			jle continue_checks
 
 			push edx // sposta sullo stack la lunghezza della parola corrente, per poi ripristinarla
@@ -92,7 +95,7 @@ void main()
 			pop ecx // ripristina l'indice della parola corrente
 
 		continue_checks:
-			cmp edx, ebx // se la lunghezza della parola corrente è maggiore della lunghezza della parola più corta, allora salta a reset
+			cmp edx, ebx // se la lunghezza della parola corrente è maggiore o uguale della lunghezza della parola più corta, allora salta a reset
 			jge reset
 
 			push ecx // sposta sullo stack l'indice della parola corrente, per poi ripristinarlo
@@ -125,7 +128,7 @@ void main()
 			inc edi
 			jmp loop_start
 
-		done: // la frase è finita
+		end_of_phrase: // la frase è finita
 			test esi, esi // ma se siamo ancora all'interno di una parola, allora salta a last_word
 			jnz last_word
 		}
