@@ -27,10 +27,29 @@ void main()
 	char parolaMax[MAX_LEN + 1];
 	char parolaMin[MAX_LEN + 1];
 
+	char trovataFine = 0;
+	for (int i = 0; i < MAX_LEN; i++)
+	{
+		if (trovataFine == 1)
+		{
+			frase[i] = -1;
+		}
+		if (frase[i] == 0)
+		{
+			trovataFine = 1;
+		}
+	}
+	for (int i = 0; i < MAX_LEN + 1; i++)
+	{
+		parolaMax[i] = -1;
+		parolaMin[i] = -1;
+	}
+
 	// Inline assembly block
 	__asm
 		{
 			xor al, al // azzera il registro al, che conterrà il carattere corrente
+			xor ah, ah // azzera il registro ah, che conterrà un boolean che indica se la frase è finita
 			xor edi, edi // azzera il registro edi, che conterrà l'indice della frase
 			xor ecx, ecx // azzera il registro ecx, che conterrà la lunghezza della parola più lunga (e in situazioni temporanee anche l'indice della parola)
 			mov ebx, MAX_LEN // imposto il registro ebx a MAX_LEN, che conterrà la lunghezza della parola più corta
@@ -119,6 +138,8 @@ void main()
 		reset: // resetta le variabili per la prossima parola e salta a increment
 			mov esi, 0
 			mov edx, 0
+			test ah, ah // se la frase è finita, allora salta a finish
+			jnz finish
 			jmp increment
 
 		change_boolean_word: // cambia a true il valore del booleano che indica se ci si trova all'interno di una parola
@@ -129,20 +150,11 @@ void main()
 			jmp loop_start
 
 		end_of_phrase: // la frase è finita
+			mov ah, 1 // imposta a true il booleano che indica che la frase è finita
 			test esi, esi // ma se siamo ancora all'interno di una parola, allora salta a last_word
 			jnz last_word
 
-		fill_word_min: // aggiunge il carattere nullo alla fine della parola più corta
-			mov byte ptr[parolaMin + ebx], 0 
-			inc ebx
-			cmp ebx, MAX_LEN
-			jle fill_word_min
-
-		fill_word_max: // aggiunge il carattere nullo alla fine della parola più lunga
-			mov byte ptr[parolaMax + ecx], 0
-			inc ecx
-			cmp ecx, MAX_LEN
-			jle fill_word_max
+		finish:
 		}
 
 	// Print the results
