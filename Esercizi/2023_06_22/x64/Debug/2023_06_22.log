@@ -1,0 +1,105 @@
+﻿  main.c
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(10,2): error C4235: nonstandard extension used: '__asm' keyword not supported on this architecture
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(12,7): error C2065: 'XOR': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(12,7): error C2146: syntax error: missing ';' before identifier 'EAX'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(12,10): error C2065: 'EAX': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(13,3): error C2065: 'EAX': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(13,3): error C2146: syntax error: missing ';' before identifier 'MOV'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(13,7): error C2065: 'MOV': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(13,7): error C2146: syntax error: missing ';' before identifier 'DX'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(13,9): error C2065: 'DX': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(14,3): error C2146: syntax error: missing ';' before identifier 'DEC'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(14,7): error C2065: 'DEC': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(14,7): error C2146: syntax error: missing ';' before identifier 'DX'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(15,3): error C2065: 'DX': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(15,3): error C2146: syntax error: missing ';' before identifier 'MOV'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(15,7): error C2065: 'MOV': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(15,7): error C2146: syntax error: missing ';' before identifier 'AX'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(15,9): error C2065: 'AX': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(16,3): error C2146: syntax error: missing ';' before identifier 'SHL'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(16,7): error C2065: 'SHL': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(16,7): error C2146: syntax error: missing ';' before identifier 'EDX'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(16,10): error C2065: 'EDX': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(17,3): error C2146: syntax error: missing ';' before identifier 'OR'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(17,6): error C2065: 'OR': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(17,6): error C2146: syntax error: missing ';' before identifier 'EDX'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(17,9): error C2065: 'EDX': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(18,3): error C2065: 'EAX': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(18,3): error C2146: syntax error: missing ';' before identifier 'BSWAP'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(18,9): error C2065: 'BSWAP': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(18,9): error C2146: syntax error: missing ';' before identifier 'EDX'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(18,12): error C2065: 'EDX': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(18,23): error C2065: 'Converte': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(18,23): error C2146: syntax error: missing ';' before identifier 'little'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(18,30): error C2065: 'little': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(18,39): error C2065: 'endian': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(18,45): error C2065: 'big': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(19,3): error C2065: 'endian': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(19,3): error C2146: syntax error: missing ';' before identifier 'ROL'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(18,45): warning C4552: '-': result of expression not used
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(19,7): error C2065: 'ROL': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(19,7): error C2146: syntax error: missing ';' before identifier 'DX'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(19,9): error C2065: 'DX': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(20,3): error C2146: syntax error: missing ';' before identifier 'MOV'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(20,7): error C2065: 'MOV': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(20,7): error C2146: syntax error: missing ';' before identifier 'Ris1'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(22,3): error C2065: 'DX': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(22,3): error C2146: syntax error: missing ';' before identifier 'MOV'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(22,7): error C2065: 'MOV': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(22,7): error C2146: syntax error: missing ';' before identifier 'AX'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(22,9): error C2065: 'AX': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(23,3): error C2146: syntax error: missing ';' before identifier 'AND'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(23,7): error C2065: 'AND': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(23,7): error C2146: syntax error: missing ';' before identifier 'AX'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(23,9): error C2065: 'AX': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(23,11): error C2059: syntax error: 'bad suffix on number'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(24,3): error C2146: syntax error: missing ';' before identifier 'NEG'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(24,7): error C2065: 'NEG': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(24,7): error C2146: syntax error: missing ';' before identifier 'AX'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(25,3): error C2065: 'AX': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(25,3): error C2146: syntax error: missing ';' before identifier 'MOV'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(25,7): error C2065: 'MOV': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(25,7): error C2146: syntax error: missing ';' before identifier 'CX'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(25,9): error C2065: 'CX': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(26,3): error C2146: syntax error: missing ';' before identifier 'SUB'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(26,7): error C2065: 'SUB': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(26,7): error C2146: syntax error: missing ';' before identifier 'AX'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(26,9): error C2065: 'AX': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(27,3): error C2065: 'CX': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(27,3): error C2146: syntax error: missing ';' before identifier 'MOV'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(27,7): error C2065: 'MOV': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(27,7): error C2146: syntax error: missing ';' before identifier 'Ris2'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(29,3): error C2065: 'AX': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(29,3): error C2146: syntax error: missing ';' before identifier 'MOV'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(29,7): error C2065: 'MOV': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(29,7): error C2146: syntax error: missing ';' before identifier 'AX'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(29,9): error C2065: 'AX': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(30,3): error C2146: syntax error: missing ';' before identifier 'MOV'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(30,7): error C2065: 'MOV': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(30,7): error C2146: syntax error: missing ';' before identifier 'DL'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(30,9): error C2065: 'DL': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(31,3): error C2065: 'AL': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(31,3): error C2146: syntax error: missing ';' before identifier 'NOT'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(31,7): error C2065: 'NOT': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(31,7): error C2146: syntax error: missing ';' before identifier 'DL'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(32,3): error C2065: 'DL': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(32,3): error C2146: syntax error: missing ';' before identifier 'MOV'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(32,7): error C2065: 'MOV': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(32,7): error C2146: syntax error: missing ';' before identifier 'ECX'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(32,10): error C2065: 'ECX': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(33,2): error C2146: syntax error: missing ';' before identifier 'L1'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(33,10): error C2065: 'MOV': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(33,10): error C2146: syntax error: missing ';' before identifier 'BYTE'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(33,15): error C2065: 'BYTE': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(33,15): error C2146: syntax error: missing ';' before identifier 'PTR'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(33,19): error C2065: 'PTR': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(33,19): error C2146: syntax error: missing ';' before identifier 'Vet'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(33,27): error C2065: 'ECX': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(34,3): error C2065: 'DL': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(34,3): error C2146: syntax error: missing ';' before identifier 'LOOP'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(34,8): error C2065: 'LOOP': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(34,8): error C2146: syntax error: missing ';' before identifier 'L1'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(35,3): error C2065: 'L1': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(35,3): error C2146: syntax error: missing ';' before identifier 'AND'
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(35,7): error C2065: 'AND': undeclared identifier
+D:\Coding-Workspace\Uni-Workspace\Arch\Arch-exercises\Esercizi\2023_06_22\main.c(35,7): fatal  error C1003: error count exceeds 100; stopping compilation
